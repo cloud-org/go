@@ -2820,6 +2820,7 @@ func typecheckcomplit(n *Node) (res *Node) {
 		}
 		elemType := n.Right.Right.Type
 
+		// 计算数组中元素的数量
 		length := typecheckarraylit(elemType, -1, n.List.Slice(), "array literal")
 
 		n.Op = OARRAYLIT
